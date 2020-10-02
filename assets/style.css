@@ -63,7 +63,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
     background: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
     border-radius: 15px;
 }
 
@@ -79,8 +79,19 @@ header nav ul li a:hover {
     background-position: 80%;
 }
 
+section {
+    padding: 15px;
+}
+
+#about-me {
+}
+
 #my-work {
     background-color: var(--tertiary-color);
+}
+
+#contact-me {
+    display: block;
 }
 .grid-container {
     width: 100%;
@@ -100,6 +111,39 @@ header nav ul li a:hover {
     border-radius: 10px;
     width: 100%;
   }
+
+#content-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    grid-column: 2 / span 4;
+}
+
+.section-title{
+    grid-column: 1 / span 1;
+    justify-self: center;
+}
+
+.about-me {
+    grid-row: 1 / span 2;
+}
+
+.my-work {
+    grid-row: 3 / span 5;
+}
+
+.contact-me {
+    grid-row: 8 / span 1;
+}
+
+#about-me div, .grid-container, .contacts {
+    border-left: var(--secondary-color) 2px solid;
+    padding: 10px;
+}
 
 .card-img {
     min-height: 100px;
@@ -141,5 +185,37 @@ header nav ul li a:hover {
 
     nav {
         width: 100%;
+    }
+
+    #about-me div, .grid-container, .contacts {
+        border: none;
+    }
+
+    .section-title, .content {
+        grid-column: 1 / span 5;
+    }
+
+    .section-title.about-me {
+        grid-row: 1 / span 1;
+    }
+
+    .content.about-me {
+        grid-row: 2 / span 2;
+    }
+
+    .section-title.my-work {
+        grid-row: 4 / span 1;
+    }
+
+    .content.my-work {
+        grid-row: 5 / span 4;
+    }
+
+    .section-title.contact-me {
+        grid-row: 9 / span 1;
+    }
+
+    .content.contact-me {
+        grid-row: 10 / span 1
     }
 }
