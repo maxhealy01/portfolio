@@ -158,7 +158,7 @@ section {
 
 .section-title {
     grid-column: 1 / span 1;
-    justify-self: center;
+    justify-self: right;
     font-size: 20px;
 }
 
@@ -240,6 +240,10 @@ section {
         width: 100%;
     }
 
+    ul li {
+        font-weight: bold;
+    }
+
     #about-me div, .grid-container, .contacts {
         border: none;
     }
@@ -279,5 +283,9 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .contacts a {
+        padding-bottom: 25px;
     }
 }
