@@ -172,6 +172,12 @@ section {
     background-image: url("../assets/images/card-5.jpeg");
 }
 
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 @media screen and (max-width: 980px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
@@ -217,5 +223,12 @@ section {
 
     .content.contact-me {
         grid-row: 10 / span 1
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
